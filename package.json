@@ -1,0 +1,14 @@
+{
+    "name": "project-2-planets-server",
+    "version": "0.1.0",
+    "scripts": {
+        "dev": "nodemon src/index.ts",
+        "build": "tsc",
+        "start": "node dist/index.js"
+    },
+    "dependencies": {
+        "express": "^4.18.2",
+        "nodemon": "^2.0.20",
+        "ts-node": "^10.9.1"
+    }
+}
