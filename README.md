@@ -7,6 +7,7 @@
 > - MongoDB
 
 ## 🚀 API Endpoints
+
 ### PLANET
 | METHOD | URI     | ACTION                                   |
 |--------|---------|------------------------------------------|
