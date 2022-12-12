@@ -20,7 +20,7 @@ app.use(cors())
 /*
     Routes
 */
-app.use('/planet', planetRoute)
+app.use('/planets', planetRoute)
 
 mongoose.connect(process.env.CONNECTION_URL!)
     .then(() => app.listen((process.env.PORT || 5000), () => console.log(`Server running`)))
