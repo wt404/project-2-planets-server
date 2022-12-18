@@ -1,4 +1,4 @@
-# Planets Server
+# Planets Server (Project 2)
 > Custom backend server for https://github.com/jasonlerit/project-2-planets
 
 ## 💻 Tech Stack
