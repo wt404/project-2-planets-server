@@ -26,7 +26,7 @@ export const verifyAccount = async (req: Request, res: Response) => {
 
         if (existingUser.verified) return res.status(400).json({ message: 'Account already verified' })
 
-        const existingVerification = await VerificationModel.findOne({ user_id: existingUser.id })
+        const existingVerification = await VerificationModel.findOne({ user_id: existingUser._id })
 
         if (!existingVerification) return res.status(400).json({ message: 'Verification not found' })
 
