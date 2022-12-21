@@ -42,22 +42,22 @@ export const sendFeedback = async (req: Request, res: Response) => {
                             Name: "SpaceVerse Feedback"
                         },
                         To: [
-                            // {
-                            //     Email: "alandemol05@gmail.com",
-                            //     Name: "Alan Demol"
-                            // },
-                            // {
-                            //     Email: "kap.utolclothing@gmail.com",
-                            //     Name: "Angela Morales"
-                            // },
+                            {
+                                Email: "alandemol05@gmail.com",
+                                Name: "Alan Demol"
+                            },
+                            {
+                                Email: "kap.utolclothing@gmail.com",
+                                Name: "Angela Morales"
+                            },
                             {
                                 Email: "jasonlerit077@gmail.com",
                                 Name: "Jason Lerit"
                             },
-                            // {
-                            //     Email: "cladojomar881@gmail.com",
-                            //     Name: "Jomar Clado"
-                            // }
+                            {
+                                Email: "cladojomar881@gmail.com",
+                                Name: "Jomar Clado"
+                            }
                         ],
                         Subject: "Feedback Received",
                         TextPart: `First Name: ${body.first_name}\nLast Name: ${body.last_name}\nEmail: ${body.email}\nMessage: ${body.message}`,
