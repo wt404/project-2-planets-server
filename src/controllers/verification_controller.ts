@@ -6,7 +6,7 @@ import VerificationModel from "../models/verification_model"
 
 export const verifyAccount = async (req: Request, res: Response) => {
     try {
-        const { id, token } = req.params    
+        const { id, token } = req.body    
 
         if (id == undefined || id == '') return res.status(400).json({
             message: 'Invalid id',
