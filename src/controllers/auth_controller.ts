@@ -47,7 +47,7 @@ export const register = async (req: Request, res: Response) => {
             token: await generateToken(),
         })
 
-        const link = `https://space-verse.vercel.app/verify/${user._id}/${verification.token}`
+        const link = `https://space-verse.vercel.app/verify?id=${user._id}&token=${verification.token}`
 
         const mailjet = Mailjet.apiConnect(
             process.env.MJ_APIKEY_PUBLIC!,
