@@ -4,6 +4,6 @@ import { verifyAccount } from '../controllers/verification_controller'
 
 const router = express.Router()
 
-router.get('/account', verifyAccount)
+router.get('/account/:id/:key', verifyAccount)
 
 export default router
