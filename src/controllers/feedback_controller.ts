@@ -7,22 +7,22 @@ export const sendFeedback = async (req: Request, res: Response) => {
         
         const body = req.body
 
-        if (body.first_name == '') return res.status(400).json({
+        if (body.first_name == undefined || body.first_name == '') return res.status(400).json({
             message: 'Invalid first name',
             type: 'first_name'
         })
 
-        if (body.last_name == '') return res.status(400).json({
+        if (body.last_name == undefined || body.last_name == '') return res.status(400).json({
             message: 'Invalid last name',
             type: 'last_name'
         })
 
-        if (body.email == '') return res.status(400).json({
+        if (body.email == undefined || body.email == '') return res.status(400).json({
             message: 'Invalid email',
             type: 'email'
         })
 
-        if (body.message == '') return res.status(400).json({
+        if (body.message == undefined || body.message == '') return res.status(400).json({
             message: 'Invalid message',
             type: 'message'
         })
@@ -42,22 +42,22 @@ export const sendFeedback = async (req: Request, res: Response) => {
                             Name: "SpaceVerse Feedback"
                         },
                         To: [
-                            {
-                                Email: "alandemol05@gmail.com",
-                                Name: "Alan Demol"
-                            },
-                            {
-                                Email: "kap.utolclothing@gmail.com",
-                                Name: "Angela Morales"
-                            },
+                            // {
+                            //     Email: "alandemol05@gmail.com",
+                            //     Name: "Alan Demol"
+                            // },
+                            // {
+                            //     Email: "kap.utolclothing@gmail.com",
+                            //     Name: "Angela Morales"
+                            // },
                             {
                                 Email: "jasonlerit077@gmail.com",
                                 Name: "Jason Lerit"
                             },
-                            {
-                                Email: "cladojomar881@gmail.com",
-                                Name: "Jomar Clado"
-                            }
+                            // {
+                            //     Email: "cladojomar881@gmail.com",
+                            //     Name: "Jomar Clado"
+                            // }
                         ],
                         Subject: "Feedback Received",
                         TextPart: `First Name: ${body.first_name}\nLast Name: ${body.last_name}\nEmail: ${body.email}\nMessage: ${body.message}`,
