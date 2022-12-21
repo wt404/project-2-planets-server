@@ -8,6 +8,7 @@ import bodyParser from 'body-parser'
 import cors from 'cors'
 
 import planetRoute from './routes/planet_route'
+import newsRoute from './routes/news_route'
 import feedbackRoute from './routes/feedback_route'
 
 mongoose.set('strictQuery', true)
@@ -22,6 +23,7 @@ app.use(cors())
     Routes
 */
 app.use('/planets', planetRoute)
+app.use('/news', newsRoute)
 app.use('/feedback', feedbackRoute)
 
 mongoose.connect(process.env.CONNECTION_URL!)
