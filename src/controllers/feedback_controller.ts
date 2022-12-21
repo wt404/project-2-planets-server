@@ -5,24 +5,24 @@ import Mailjet from "node-mailjet"
 export const sendFeedback = async (req: Request, res: Response) => {
     try {
         
-        const body = req.body
+        const { first_name, last_name, email, message } = req.body
 
-        if (body.first_name == undefined || body.first_name == '') return res.status(400).json({
+        if (first_name == undefined || first_name == '') return res.status(400).json({
             message: 'Invalid first name',
             type: 'first_name'
         })
 
-        if (body.last_name == undefined || body.last_name == '') return res.status(400).json({
+        if (last_name == undefined || last_name == '') return res.status(400).json({
             message: 'Invalid last name',
             type: 'last_name'
         })
 
-        if (body.email == undefined || body.email == '') return res.status(400).json({
+        if (email == undefined || email == '') return res.status(400).json({
             message: 'Invalid email',
             type: 'email'
         })
 
-        if (body.message == undefined || body.message == '') return res.status(400).json({
+        if (message == undefined || message == '') return res.status(400).json({
             message: 'Invalid message',
             type: 'message'
         })
@@ -58,7 +58,7 @@ export const sendFeedback = async (req: Request, res: Response) => {
                         }
                     ],
                     Subject: "Feedback Received",
-                    TextPart: `First Name: ${body.first_name}\nLast Name: ${body.last_name}\nEmail: ${body.email}\nMessage: ${body.message}`,
+                    TextPart: `First Name: ${first_name}\nLast Name: ${last_name}\nEmail: ${email}\nMessage: ${message}`,
                     HTMLPart: ""
                 }
             ]
