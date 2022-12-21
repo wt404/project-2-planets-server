@@ -7,10 +7,12 @@ import express, { Application } from 'express'
 import bodyParser from 'body-parser'
 import cors from 'cors'
 
-import authRoute from './routes/auth_route'
 import planetRoute from './routes/planet_route'
 import newsRoute from './routes/news_route'
 import feedbackRoute from './routes/feedback_route'
+
+import authRoute from './routes/auth_route'
+import verificationRoute from './routes/verification_route'
 
 mongoose.set('strictQuery', true)
 
@@ -23,10 +25,12 @@ app.use(cors())
 /*
     Routes
 */
-app.use('/auth', authRoute)
 app.use('/planets', planetRoute)
 app.use('/news', newsRoute)
 app.use('/feedback', feedbackRoute)
+
+app.use('/auth', authRoute)
+app.use('/verify', verificationRoute)
 
 mongoose.connect(process.env.CONNECTION_URL!)
     .then(() => app.listen((process.env.PORT || 5000), () => console.log(`Server running`)))
