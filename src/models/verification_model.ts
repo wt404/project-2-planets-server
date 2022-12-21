@@ -1,5 +1,5 @@
 
-import { Schema, model, ObjectId } from "mongoose";
+import { Schema, model, ObjectId } from "mongoose"
 
 interface VerificationInterface {
     user_id: ObjectId
