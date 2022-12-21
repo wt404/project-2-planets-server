@@ -8,18 +8,24 @@
 
 ## 🚀 API Endpoints
 
+### Auth
+| METHOD | URI           | ACTION                                       |
+|--------|---------------|----------------------------------------------|
+| POST   | auth/register | controllers/auth_controller@register         |
+| POST   | auth/login    | controllers/auth_controller@login            |
+
 ### Planets
-| METHOD | URI        | ACTION                                       |
-|--------|------------|----------------------------------------------|
-| GET    | planets    | controllers/planet_controller@getPlanets     |
-| GET    | planets/id | controllers/planet_controller@getPlanet      |
+| METHOD | URI           | ACTION                                       |
+|--------|---------------|----------------------------------------------|
+| GET    | planets    | controllers/planet_controller@getPlanets        |
+| GET    | planets/id | controllers/planet_controller@getPlanet         |
 
 ### News
-| METHOD | URI        | ACTION                                       |
-|--------|------------|----------------------------------------------|
-| GET    | news       | controllers/news_controller@getNews          |
+| METHOD | URI           | ACTION                                       |
+|--------|---------------|----------------------------------------------|
+| GET    | news       | controllers/news_controller@getNews             |
 
 ### Feedback
-| METHOD | URI        | ACTION                                       |
-|--------|------------|----------------------------------------------|
-| POST   | feedback   | controllers/feedback_controller@sendFeedback |
+| METHOD | URI           | ACTION                                       |
+|--------|---------------|----------------------------------------------|
+| POST   | feedback   | controllers/feedback_controller@sendFeedback    |
