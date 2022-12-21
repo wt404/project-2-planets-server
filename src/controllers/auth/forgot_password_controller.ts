@@ -1,7 +1,7 @@
 
 import { Request, Response } from "express"
 import Mailjet from "node-mailjet"
-import UserModel from "../../models/user_mode"
+import UserModel from "../../models/user_model"
 import VerificationModel from "../../models/verification_model"
 import { generateToken } from "../verification_controller"
 

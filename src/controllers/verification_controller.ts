@@ -1,7 +1,7 @@
 
 import mongoose from 'mongoose'
 import { Request, Response } from "express"
-import UserModel from "../models/user_mode"
+import UserModel from "../models/user_model"
 import VerificationModel from "../models/verification_model"
 
 export const verifyAccount = async (req: Request, res: Response) => {
