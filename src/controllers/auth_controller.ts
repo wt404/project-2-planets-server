@@ -61,6 +61,7 @@ export const login = async (req: Request, res: Response) => {
         if (!existingUser) return res.status(400).json({ message: 'Invalid credentials' })
         const isPasswordMatch = await bcrypt.compare(password, existingUser.password)
         if (!isPasswordMatch) return res.status(400).json({ message: 'Invalid credentials' })
+        if (!existingUser.verified) return res.status(400).json({ message: 'Please verify your account first '})
         const token = jwt.sign(
             {
                 first_name: existingUser.firstName,
