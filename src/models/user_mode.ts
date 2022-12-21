@@ -6,6 +6,7 @@ interface UserInterface {
     lastName: string
     email: string
     password: string
+    verified: boolean
     createdAt: Date
 }
 
@@ -14,6 +15,7 @@ const schema = new Schema<UserInterface>({
     lastName: { type: String, required: true },
     email: { type: String, required: true },
     password: { type: String, required: true },
+    verified: { type: Boolean, default: false },
     createdAt: { type: Date, default: new Date() },
 })
 
