@@ -8,8 +8,8 @@
 
 ## 🚀 API Endpoints
 
-### PLANET
-| METHOD | URI        | ACTION                                   |
-|--------|------------|------------------------------------------|
-| GET    | planets    | controllers/planet_controller@getPlanets |
-| GET    | planets/id | controllers/planet_controller@getPlanet  |
+| METHOD | URI        | ACTION                                       |
+|--------|------------|----------------------------------------------|
+| GET    | planets    | controllers/planet_controller@getPlanets     |
+| GET    | planets/id | controllers/planet_controller@getPlanet      |
+| POST   | feedback   | controllers/feedback_controller@sendFeedback |
