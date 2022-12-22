@@ -11,10 +11,10 @@ interface UserInterface {
 }
 
 const schema = new Schema<UserInterface>({
-    firstName: { type: String, required: true },
-    lastName: { type: String, required: true },
+    firstName: { type: String, default: null },
+    lastName: { type: String, default: null },
     email: { type: String, required: true },
-    password: { type: String, required: true },
+    password: { type: String },
     verified: { type: Boolean, default: false },
     createdAt: { type: Date, default: new Date() },
 })
