@@ -35,7 +35,7 @@ export const verifyAccount = async (req: Request, res: Response) => {
 
         await UserModel.findByIdAndUpdate(id, { verified: true })
 
-        res.json('Account verified')
+        res.json({ message: 'Account verified' })
     } catch (error) {
         res.status(500).json({ message: 'Something went wrong' })
     }

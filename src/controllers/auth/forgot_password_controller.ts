@@ -51,7 +51,7 @@ export const forgotPassword = async (req: Request, res: Response) => {
             })
         }
 
-        res.json('Check your email for a link to reset your password.')
+        res.json({ message: 'Check your email for a link to reset your password.' })
 
     } catch (error) {
         res.status(500).json({ message: 'Something went wrong' })

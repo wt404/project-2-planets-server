@@ -73,7 +73,7 @@ export const register = async (req: Request, res: Response) => {
             ]
         })
 
-        res.json('Successfully registered')
+        res.json({ message: 'Successfully registered' })
     } catch (error) {
         res.status(500).json({ message: 'Something went wrong' })
     }

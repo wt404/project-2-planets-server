@@ -64,7 +64,7 @@ export const sendFeedback = async (req: Request, res: Response) => {
             ]
         })
 
-        res.json("Feedback sent")
+        res.json({ message: 'Feedback sent' })
     } catch (error) {
         res.status(500).json({ message: 'Something went wrong' })
     }
