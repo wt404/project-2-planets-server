@@ -4,7 +4,7 @@ import mongoose from 'mongoose'
 import { Request, Response } from "express"
 import UserModel from "../models/user_model"
 import VerificationModel from "../models/verification_model"
-import { validateId, validateToken } from '../utils/validation_util'
+import { validateId, validatePassword, validateToken } from '../utils/validation_util'
 
 export const verifyAccount = async (req: Request, res: Response) => {
     try {
@@ -52,20 +52,29 @@ export const verifyPassword = async (req: Request, res: Response) => {
     try {
         const { id, token, password } = req.body
 
-        if (id == undefined || id == '') return res.status(400).json({
-            message: 'Invalid id',
-            type: 'id'
-        })
+        let validateResponse = validateId(id)
+        if (validateResponse !== null) {
+            return res.status(400).json({
+                message: validateResponse,
+                type: 'id'
+            })
+        }
 
-        if (token == undefined || token == '') return res.status(400).json({
-            message: 'Invalid token',
-            type: 'token'
-        })
+        validateResponse = validateToken(token)
+        if (validateResponse !== null) {
+            return res.status(400).json({
+                message: validateResponse,
+                type: 'token'
+            })
+        }
 
-        if (password == undefined || password == '') return res.status(400).json({
-            message: 'Invalid password',
-            type: 'password'
-        })
+        validateResponse = validatePassword(password)
+        if (validateResponse !== null) {
+            return res.status(400).json({
+                message: validateResponse,
+                type: 'password'
+            })
+        }
 
         if (!mongoose.Types.ObjectId.isValid(id)) return res.status(400).json({ message: 'Invalid id' })
 
