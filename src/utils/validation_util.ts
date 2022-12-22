@@ -1,5 +1,8 @@
 
 export const validateFirstName = (value: string) => {
+    if (value === undefined || value === null) {
+        return 'Invalid first name'
+    }
     if (value.length === 0) {
         return 'Please enter your first name'
     }
@@ -13,6 +16,9 @@ export const validateFirstName = (value: string) => {
 }
 
 export const validateLastName = (value: string) => {
+    if (value === undefined || value === null) {
+        return 'Invalid last name'
+    }
     if (value.length === 0) {
         return 'Please enter your last name'
     }
