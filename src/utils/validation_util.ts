@@ -1,4 +1,30 @@
 
+export const validateId = (value: string) => {
+    if (value === undefined || value === null) {
+        return 'Invalid id'
+    }
+    if (value.length === 0) {
+        return 'Please enter an id'
+    }
+    if (!/^[A-Za-z0-9]*$/.test(value)) {
+        return 'Invalid id'
+    }
+    return null
+}
+
+export const validateToken = (value: string) => {
+    if (value === undefined || value === null) {
+        return 'Invalid token'
+    }
+    if (value.length === 0) {
+        return 'Please enter a token'
+    }
+    if (!/^[A-Za-z0-9]*$/.test(value)) {
+        return 'Invalid token'
+    }
+    return null
+}
+
 export const validateFirstName = (value: string) => {
     if (value === undefined || value === null) {
         return 'Invalid first name'
