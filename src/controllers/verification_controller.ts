@@ -76,7 +76,7 @@ export const verifyPassword = async (req: Request, res: Response) => {
 
         await UserModel.findByIdAndUpdate(id, { password: hashedPassword })
 
-        res.json('Password changed')
+        res.json({ message: 'Password has been updated' })
         
     } catch (error) {
         res.status(500).json({ message: 'Something went wrong' })
