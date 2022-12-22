@@ -3,20 +3,27 @@ import bcrypt from 'bcrypt'
 import jwt from 'jsonwebtoken'
 import { Request, Response } from "express"
 import UserModel from '../../models/user_model'
+import { validateEmail, validatePassword } from '../../utils/validation_util'
 
 export const login = async (req: Request, res: Response) => {
     try {
         const { email, password } = req.body
 
-        if (email == undefined || email == '') return res.status(400).json({
-            message: 'Invalid email',
-            type: 'email'
-        })
+        let validateResponse = validateEmail(email)
+        if (validateResponse !== null) {
+            return res.status(400).json({
+                message: validateResponse,
+                type: 'email'
+            })
+        }
 
-        if (password == undefined || password == '') return res.status(400).json({
-            message: 'Invalid password',
-            type: 'password'
-        })
+        validateResponse = validatePassword(password)
+        if (validateResponse !== null) {
+            return res.status(400).json({
+                message: validateResponse,
+                type: 'password'
+            })
+        }
 
         const existingUser = await UserModel.findOne({ email })
         if (!existingUser) return res.status(400).json({ message: 'Invalid credentials' })
