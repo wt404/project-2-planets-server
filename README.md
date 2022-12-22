@@ -13,7 +13,7 @@
 |--------|----------------------|--------------------------------------------------------------|
 | POST   | auth/register        | controllers/auth/register_controller@register                |
 | POST   | auth/login           | controllers/auth/login_controller@login                      |
-| POST   | auth/forgot-password | controllers/auth/forgot_password_controller@forgotPassword   |
+| POST   | auth/reset-password  | controllers/auth/reset_password_controller@resetPassword     |
 
 ### Verification
 | METHOD | URI                  | ACTION                                                       |
