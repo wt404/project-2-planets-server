@@ -33,6 +33,9 @@ export const validateEmail = (value: string) => {
 }
 
 export const validatePassword = (value: string) => {
+    if (value === undefined || value === null) {
+        return 'Invalid password'
+    }
     if (value.length < 8) {
         return 'Minimum is 8'
     }
