@@ -8,19 +8,6 @@
 
 ## 🚀 API Endpoints
 
-### Auth
-| METHOD | URI                  | ACTION                                                          |
-|--------|----------------------|-----------------------------------------------------------------|
-| POST   | auth/register        | controllers/auth/register_controller@register                   |
-| POST   | auth/login           | controllers/auth/login_controller@login                         |
-| POST   | auth/google          | controllers/auth/login_with_google_controller@loginWithGoogle   |
-| POST   | auth/forgot-password | controllers/auth/forgot_password_controller@forgotPassword      |
-
-### Verification
-| METHOD | URI                  | ACTION                                                          |
-|--------|----------------------|-----------------------------------------------------------------|
-| POST   | verify/account       | controllers/verification_controller@verifyAccount               |
-
 ### Planets
 | METHOD | URI                  | ACTION                                                          |
 |--------|----------------------|-----------------------------------------------------------------|
@@ -36,3 +23,17 @@
 | METHOD | URI                  | ACTION                                                          |
 |--------|----------------------|-----------------------------------------------------------------|
 | POST   | feedback             | controllers/feedback_controller@sendFeedback                    |
+
+### Auth
+| METHOD | URI                  | ACTION                                                          |
+|--------|----------------------|-----------------------------------------------------------------|
+| POST   | auth/register        | controllers/auth/register_controller@register                   |
+| POST   | auth/login           | controllers/auth/login_controller@login                         |
+| POST   | auth/google          | controllers/auth/login_with_google_controller@loginWithGoogle   |
+| POST   | auth/forgot-password | controllers/auth/forgot_password_controller@forgotPassword      |
+
+### Verification
+| METHOD | URI                  | ACTION                                                          |
+|--------|----------------------|-----------------------------------------------------------------|
+| POST   | verify/account       | controllers/verification_controller@verifyAccount               |
+| POST   | verify/password      | controllers/verification_controller@verifyPassword              |
