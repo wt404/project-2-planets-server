@@ -4,31 +4,44 @@ import { Request, Response } from "express"
 import Mailjet from "node-mailjet"
 import UserModel from "../../models/user_model"
 import VerificationModel from '../../models/verification_model'
+import { validateEmail, validateFirstName, validateLastName, validatePassword } from '../../utils/validation_util'
 import { generateToken } from '../verification_controller'
 
 export const register = async (req: Request, res: Response) => {
     try {
         const { first_name, last_name, email, password } = req.body
 
-        if (first_name == undefined || first_name == '') return res.status(400).json({
-            message: 'Invalid first name',
-            type: 'first_name'
-        })
+        let validateResponse = validateFirstName(first_name)
+        if (validateResponse !== null) {
+            return res.status(400).json({
+                message: validateResponse,
+                type: 'first_name'
+            })
+        }
 
-        if (last_name == undefined || last_name == '') return res.status(400).json({
-            message: 'Invalid last name',
-            type: 'last_name'
-        })
+        validateResponse = validateLastName(last_name)
+        if (validateResponse !== null) {
+            return res.status(400).json({
+                message: validateResponse,
+                type: 'last_name'
+            })
+        }
 
-        if (email == undefined || email == '') return res.status(400).json({
-            message: 'Invalid email',
-            type: 'email'
-        })
+        validateResponse = validateEmail(email)
+        if (validateResponse !== null) {
+            return res.status(400).json({
+                message: validateResponse,
+                type: 'email'
+            })
+        }
 
-        if (password == undefined || password == '') return res.status(400).json({
-            message: 'Invalid password',
-            type: 'password'
-        })
+        validateResponse = validatePassword(password)
+        if (validateResponse !== null) {
+            return res.status(400).json({
+                message: validateResponse,
+                type: 'password'
+            })
+        }
 
         const existingUser = await UserModel.findOne({ email })
         if (existingUser) return res.status(400).json({ message: 'Email not available' })
