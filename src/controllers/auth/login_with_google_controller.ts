@@ -42,7 +42,6 @@ export const loginWithGoogle = async (req: Request, res: Response) => {
         )
         res.json({ token })
     } catch (error) {
-        console.log(error)
         res.status(500).json({ message: 'Something went wrong' })
     }
 }

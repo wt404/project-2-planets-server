@@ -19,7 +19,6 @@ export const getPlanet = async (req: Request, res: Response) => {
         const planet = await PlanetModel.find({ _id: id })
         res.json(planet)
     } catch (error) {
-        console.log(error)
         res.status(500).json({ message: 'Something went wrong' })
     }
 }
