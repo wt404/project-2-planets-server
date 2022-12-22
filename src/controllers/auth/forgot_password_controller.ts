@@ -5,7 +5,7 @@ import UserModel from "../../models/user_model"
 import VerificationModel from "../../models/verification_model"
 import { generateToken } from "../verification_controller"
 
-export const resetPassword = async (req: Request, res: Response) => {
+export const forgotPassword = async (req: Request, res: Response) => {
     try {
         const { email } = req.body
 
