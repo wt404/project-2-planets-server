@@ -66,13 +66,13 @@ export const verifyPassword = async (req: Request, res: Response) => {
 
         if (!existingUser) return res.status(400).json({ message: 'Invalid credentials' })
 
-        const existingVerification = await VerificationModel.findOne({ user_id: existingUser._id })
+        const existingVerification = await VerificationModel.findOne({ user_id: existingUser._id, type: 'password', token })
 
         if (!existingVerification) return res.status(400).json({ message: 'Verification not found' })
 
-        if (token != existingVerification.token) return res.status(400).json({ message: 'Verification token not matched' })
-
         const hashedPassword = await bcrypt.hash(password, 12)
+
+        await VerificationModel.findByIdAndDelete(existingVerification._id)
 
         await UserModel.findByIdAndUpdate(id, { password: hashedPassword })
 
