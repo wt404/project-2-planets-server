@@ -43,7 +43,7 @@ export const forgotPassword = async (req: Request, res: Response) => {
                                 Name: `${existingUser.firstName} ${existingUser.lastName}`
                             },
                         ],
-                        Subject: "Verify your Account",
+                        Subject: "Reset Password",
                         TextPart: `Hello ${existingUser.firstName}, if you requested to change your password please click the link: ${link}`,
                         HTMLPart: ""
                     }
