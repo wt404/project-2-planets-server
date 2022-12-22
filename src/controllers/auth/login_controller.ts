@@ -20,6 +20,7 @@ export const login = async (req: Request, res: Response) => {
 
         const existingUser = await UserModel.findOne({ email })
         if (!existingUser) return res.status(400).json({ message: 'Invalid credentials' })
+        if (!existingUser.password) return res.status(400).json({ message: 'Invalid credentials' })
         const isPasswordMatch = await bcrypt.compare(password, existingUser.password)
         if (!isPasswordMatch) return res.status(400).json({ message: 'Invalid credentials' })
         if (!existingUser.verified) return res.status(400).json({ message: 'Please verify your account first '})
