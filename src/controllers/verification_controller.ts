@@ -27,11 +27,11 @@ export const verifyAccount = async (req: Request, res: Response) => {
 
         if (existingUser.verified) return res.status(400).json({ message: 'Account already verified' })
 
-        const existingVerification = await VerificationModel.findOne({ user_id: existingUser._id })
+        const existingVerification = await VerificationModel.findOne({ user_id: existingUser._id, type: 'account', token })
 
         if (!existingVerification) return res.status(400).json({ message: 'Verification not found' })
 
-        if (token != existingVerification.token) return res.status(400).json({ message: 'Verification token not matched' })
+        await VerificationModel.findByIdAndDelete(existingVerification._id)
 
         await UserModel.findByIdAndUpdate(id, { verified: true })
 
