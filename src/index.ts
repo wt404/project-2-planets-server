@@ -3,6 +3,8 @@ import dotenv from 'dotenv'
 dotenv.config()
 
 import mongoose from 'mongoose'
+import mongoSanitize from 'express-mongo-sanitize'
+
 import express, { Application } from 'express'
 import bodyParser from 'body-parser'
 import cors from 'cors'
@@ -21,6 +23,8 @@ const app: Application = express()
 app.use(bodyParser.json({ limit: '30mb' }))
 app.use(bodyParser.urlencoded({ limit: '30mb', extended: true }))
 app.use(cors())
+
+app.use(mongoSanitize())
 
 /*
     Routes
