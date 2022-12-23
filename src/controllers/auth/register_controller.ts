@@ -44,7 +44,11 @@ export const register = async (req: Request, res: Response) => {
         }
 
         const existingUser = await UserModel.findOne({ email })
-        if (existingUser) return res.status(400).json({ message: 'Email not available' })
+        if (existingUser) return res.status(400).json({
+            message: 'Email not available',
+            type: 'email'
+        })
+        
         const hashedPassword = await bcrypt.hash(password, 12)
         const user = await UserModel.create({
             firstName: first_name,
