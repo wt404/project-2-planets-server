@@ -39,7 +39,7 @@ export const forgotPassword = async (req: Request, res: Response) => {
                     {
                         From: {
                             Email: "spaceversegroup2@gmail.com",
-                            Name: "SpaceVerse Reset Password"
+                            Name: "SpaceVerse"
                         },
                         To: [
                             {
