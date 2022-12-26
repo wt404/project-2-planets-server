@@ -17,6 +17,7 @@ import authRoute from './routes/auth_route'
 import verificationRoute from './routes/verification_route'
 
 import leaderdboardRoute from './routes/quiz/leaderboard_route'
+import dashboardRoute from './routes/user/dashboard_route'
 
 mongoose.set('strictQuery', true)
 
@@ -39,6 +40,8 @@ app.use('/auth', authRoute)
 app.use('/verify', verificationRoute)
 
 app.use('/leaderboards', leaderdboardRoute)
+
+app.use('/user/dashboard', dashboardRoute)
 
 mongoose.connect(process.env.CONNECTION_URL!)
     .then(() => app.listen((process.env.PORT || 5000), () => console.log(`Server running`)))
