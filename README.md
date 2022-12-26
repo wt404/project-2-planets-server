@@ -37,3 +37,8 @@
 |--------|----------------------|-----------------------------------------------------------------|
 | POST   | verify/account       | controllers/verification_controller@verifyAccount               |
 | POST   | verify/password      | controllers/verification_controller@verifyPassword              |
+
+### Leaderboard
+| METHOD | URI                  | ACTION                                                          |
+|--------|----------------------|-----------------------------------------------------------------|
+| POST   | leaderboard          | controllers/quiz/leaderboard_controller@getLeadeboards          |
