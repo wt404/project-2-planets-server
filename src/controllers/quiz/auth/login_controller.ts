@@ -37,7 +37,7 @@ export const login = async (req: Request, res: Response) => {
                 last_name: existingUser.lastName,
                 email: existingUser.email,
             },
-            process.env.JTW_SECRET!,
+            process.env.JWT_SECRET!,
             {
                 expiresIn: process.env.JWT_EXPIRES_IN
             }
