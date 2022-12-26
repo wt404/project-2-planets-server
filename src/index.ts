@@ -16,6 +16,8 @@ import feedbackRoute from './routes/feedback_route'
 import authRoute from './routes/auth_route'
 import verificationRoute from './routes/verification_route'
 
+import leaderdboardRoute from './routes/quiz/leaderboard_route'
+
 mongoose.set('strictQuery', true)
 
 const app: Application = express()
@@ -35,6 +37,8 @@ app.use('/feedback', feedbackRoute)
 
 app.use('/auth', authRoute)
 app.use('/verify', verificationRoute)
+
+app.use('/leaderboards', leaderdboardRoute)
 
 mongoose.connect(process.env.CONNECTION_URL!)
     .then(() => app.listen((process.env.PORT || 5000), () => console.log(`Server running`)))
