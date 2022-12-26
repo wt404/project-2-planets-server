@@ -3,7 +3,7 @@ import { Request, Response } from "express"
 import LeaderboardModel from "../../models/leaderboard_model"
 import UserModel from "../../models/user_model"
 
-export const getLeadeboards = async (_req: Request, res: Response) => {
+export const getLeadeboards = async (req: Request, res: Response) => {
     try {
         
         const result = await LeaderboardModel.aggregate([
