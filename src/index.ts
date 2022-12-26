@@ -13,7 +13,7 @@ import planetRoute from './routes/planet_route'
 import newsRoute from './routes/news_route'
 import feedbackRoute from './routes/feedback_route'
 
-import verificationRoute from './routes/verification_route'
+import verificationRoute from './routes/verify/verification_route'
 
 import authRoute from './routes/quiz/auth_route'
 import leaderdboardRoute from './routes/quiz/leaderboard_route'

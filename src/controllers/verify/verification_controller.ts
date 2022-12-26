@@ -2,9 +2,9 @@
 import bcrypt from 'bcrypt'
 import mongoose from 'mongoose'
 import { Request, Response } from "express"
-import UserModel from "../models/user_model"
-import VerificationModel from "../models/verification_model"
-import { validateId, validatePassword, validateToken } from '../utils/validation_util'
+import UserModel from "../../models/user_model"
+import VerificationModel from "../../models/verification_model"
+import { validateId, validatePassword, validateToken } from '../../utils/validation_util'
 
 export const verifyAccount = async (req: Request, res: Response) => {
     try {
