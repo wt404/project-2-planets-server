@@ -2,8 +2,8 @@
 import bcrypt from 'bcrypt'
 import jwt from 'jsonwebtoken'
 import { Request, Response } from "express"
-import UserModel from '../../models/user_model'
-import { validateEmail, validatePassword } from '../../utils/validation_util'
+import UserModel from '../../../models/user_model'
+import { validateEmail, validatePassword } from '../../../utils/validation_util'
 
 export const login = async (req: Request, res: Response) => {
     try {

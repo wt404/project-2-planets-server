@@ -1,10 +1,10 @@
 
 import { Request, Response } from "express"
 import Mailjet from "node-mailjet"
-import UserModel from "../../models/user_model"
-import VerificationModel from "../../models/verification_model"
-import { validateEmail } from "../../utils/validation_util"
-import { generateToken } from "../verification_controller"
+import UserModel from "../../../models/user_model"
+import VerificationModel from "../../../models/verification_model"
+import { validateEmail } from "../../../utils/validation_util"
+import { generateToken } from "../../verification_controller"
 
 export const forgotPassword = async (req: Request, res: Response) => {
     try {

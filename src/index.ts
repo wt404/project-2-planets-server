@@ -13,10 +13,11 @@ import planetRoute from './routes/planet_route'
 import newsRoute from './routes/news_route'
 import feedbackRoute from './routes/feedback_route'
 
-import authRoute from './routes/auth_route'
 import verificationRoute from './routes/verification_route'
 
+import authRoute from './routes/quiz/auth_route'
 import leaderdboardRoute from './routes/quiz/leaderboard_route'
+
 import dashboardRoute from './routes/user/dashboard_route'
 
 mongoose.set('strictQuery', true)
@@ -32,15 +33,20 @@ app.use(mongoSanitize())
 /*
     Routes
 */
+
+/* Main */
 app.use('/planets', planetRoute)
 app.use('/news', newsRoute)
 app.use('/feedback', feedbackRoute)
 
-app.use('/auth', authRoute)
+/* Verify */
 app.use('/verify', verificationRoute)
 
-app.use('/leaderboards', leaderdboardRoute)
+/* Quiz */
+app.use('/quiz/auth', authRoute)
+app.use('/quiz/leaderboards', leaderdboardRoute)
 
+/* User */
 app.use('/user/dashboard', dashboardRoute)
 
 mongoose.connect(process.env.CONNECTION_URL!)

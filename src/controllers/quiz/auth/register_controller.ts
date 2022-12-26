@@ -2,10 +2,10 @@
 import bcrypt from 'bcrypt'
 import { Request, Response } from "express"
 import Mailjet from "node-mailjet"
-import UserModel from "../../models/user_model"
-import VerificationModel from '../../models/verification_model'
-import { validateEmail, validateFirstName, validateLastName, validatePassword } from '../../utils/validation_util'
-import { generateToken } from '../verification_controller'
+import UserModel from "../../../models/user_model"
+import VerificationModel from '../../../models/verification_model'
+import { validateEmail, validateFirstName, validateLastName, validatePassword } from '../../../utils/validation_util'
+import { generateToken } from '../../verification_controller'
 
 export const register = async (req: Request, res: Response) => {
     try {

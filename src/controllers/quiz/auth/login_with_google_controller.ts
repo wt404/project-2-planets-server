@@ -2,7 +2,7 @@
 import jwt from 'jsonwebtoken'
 import { Request, Response } from "express"
 import { OAuth2Client } from 'google-auth-library'
-import UserModel from "../../models/user_model"
+import UserModel from "../../../models/user_model"
 const client = new OAuth2Client(process.env.GOOGLE_OAUTH_CLIENT_ID)
 
 export const loginWithGoogle = async (req: Request, res: Response) => {
