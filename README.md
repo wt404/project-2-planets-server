@@ -41,4 +41,4 @@
 ### Leaderboard
 | METHOD | URI                  | ACTION                                                          |
 |--------|----------------------|-----------------------------------------------------------------|
-| POST   | leaderboard          | controllers/quiz/leaderboard_controller@getLeadeboards          |
+| GET    | leaderboard          | controllers/quiz/leaderboard_controller@getLeadeboards          |
