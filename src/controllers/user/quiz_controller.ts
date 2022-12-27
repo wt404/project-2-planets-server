@@ -22,9 +22,10 @@ export const getQuiz = async (req: Request, res: Response) => {
         if (leaderboard.finishedAt == null) {
             const quizData = await QuizModel.findOne({ _id: leaderboard.questionId })
             if (!quizData) return res.status(400).json({ message: 'Question not found' })
-            
+
             return res.json({
                 status: 'answering',
+                questionId: quizData._id,
                 question: quizData.question,
                 choices: quizData.choices,
                 totalCompletedQuestion: leaderboard.completedQuestionList.length
@@ -67,6 +68,7 @@ export const startQuiz = async (req: Request, res: Response) => {
 
         res.json({
             status: 'answering',
+            questionId: quizData._id,
             question: quizData.question,
             choices: quizData.choices,
             totalCompletedQuestion: leaderboard.completedQuestionList.length
