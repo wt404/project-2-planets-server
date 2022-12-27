@@ -18,9 +18,21 @@ import verificationRoute from './routes/verify/verification_route'
 import authRoute from './routes/quiz/auth_route'
 import leaderdboardRoute from './routes/quiz/leaderboard_route'
 
+import authMiddleware from './middlewares/auth_middleware'
 import dashboardRoute from './routes/user/dashboard_route'
 
 mongoose.set('strictQuery', true)
+
+/*
+    User for auth_middleware
+*/
+declare global {
+    namespace Express {
+        interface Request {
+            user: any
+        }
+    }
+}
 
 const app: Application = express()
 
@@ -46,8 +58,8 @@ app.use('/verify', verificationRoute)
 app.use('/quiz/auth', authRoute)
 app.use('/quiz/leaderboards', leaderdboardRoute)
 
-/* User */
-app.use('/user/dashboard', dashboardRoute)
+/* User with middleware */
+app.use('/user/dashboard', authMiddleware, dashboardRoute)
 
 mongoose.connect(process.env.CONNECTION_URL!)
     .then(() => app.listen((process.env.PORT || 5000), () => console.log(`Server running`)))
