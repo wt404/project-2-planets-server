@@ -57,16 +57,16 @@ export const getDashboardStats = async (req: Request, res: Response) => {
 
         const stats = {
             rank: null,
-            correct_answer: null,
-            started_at: null,
-            finished_at: null
+            correctAnswer: null,
+            startedAt: null,
+            finishedAt: null
         }
 
         if (result.length != 0) {
             stats.rank = result[0]["rank"]
-            stats.correct_answer = result[0].players["score"]
-            stats.started_at = result[0].players["startedAt"]
-            stats.finished_at = result[0].players["finishedAt"]
+            stats.correctAnswer = result[0].players["score"]
+            stats.startedAt = result[0].players["startedAt"]
+            stats.finishedAt = result[0].players["finishedAt"]
         }
 
         res.json(stats)
