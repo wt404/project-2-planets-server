@@ -20,6 +20,7 @@ import leaderdboardRoute from './routes/quiz/leaderboard_route'
 
 import authMiddleware from './middlewares/auth_middleware'
 import dashboardRoute from './routes/user/dashboard_route'
+import quizRoute from './routes/user/quiz_route'
 
 mongoose.set('strictQuery', true)
 
@@ -60,6 +61,7 @@ app.use('/quiz/leaderboards', leaderdboardRoute)
 
 /* User with middleware */
 app.use('/user/dashboard', authMiddleware, dashboardRoute)
+app.use('/user/quiz', authMiddleware, quizRoute)
 
 mongoose.connect(process.env.CONNECTION_URL!)
     .then(() => app.listen((process.env.PORT || 5000), () => console.log(`Server running`)))
