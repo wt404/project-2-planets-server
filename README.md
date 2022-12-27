@@ -41,4 +41,14 @@
 ### Leaderboard
 | METHOD | URI                       | ACTION                                                               |
 |--------|---------------------------|----------------------------------------------------------------------|
-| GET    | quiz/leaderboard          | controllers/quiz/leaderboard_controller@getLeadeboards               |
+| GET    | quiz/leaderboards         | controllers/quiz/leaderboard_controller@getLeadeboards               |
+
+### Dashboard
+| METHOD | URI                       | ACTION                                                               |
+|--------|---------------------------|----------------------------------------------------------------------|
+| GET    | user/dashboard            | controllers/user/dashboard_controller@getDashboardStats              |
+
+### Quiz Game
+| METHOD | URI                       | ACTION                                                               |
+|--------|---------------------------|----------------------------------------------------------------------|
+| GET    | user/quiz                 | controllers/user/quiz_controller@getQuiz                             |
