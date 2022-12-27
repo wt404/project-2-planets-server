@@ -6,8 +6,8 @@ interface LeaderboardInterface {
     score: number
     startedAt: Date
     finishedAt: Date
-    question_id: ObjectId
-    completed_question_list: []
+    questionId: ObjectId
+    completedQuestionList: []
 }
 
 const schema = new Schema<LeaderboardInterface>({
@@ -15,8 +15,8 @@ const schema = new Schema<LeaderboardInterface>({
     score: { type: Number, default: 0 },
     startedAt: { type: Date, default: new Date() },
     finishedAt: { type: Date, default: null },
-    question_id: { type: Schema.Types.ObjectId, req: 'Question', default: null },
-    completed_question_list: { type: [], default: [] }
+    questionId: { type: Schema.Types.ObjectId, req: 'Question', default: null },
+    completedQuestionList: { type: [], default: [] }
 })
 
 const LeaderboardModel = model<LeaderboardInterface>('Leaderboard', schema)

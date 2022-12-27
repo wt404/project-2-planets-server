@@ -30,11 +30,11 @@ export const getLeadeboards = async (req: Request, res: Response) => {
 
         for (const data of result) {
             const existingUser = await UserModel.findOne({ _id: data.user_id })
-            data['full_name'] = existingUser ? `${existingUser.firstName} ${existingUser.lastName}` : 'Not found'
+            data['fullName'] = existingUser ? `${existingUser.firstName} ${existingUser.lastName}` : 'Not found'
 
             delete data.user_id
-            delete data.question_id
-            delete data.completed_question_list
+            delete data.questionId
+            delete data.completedQuestionList
         }
 
         res.json(result)
