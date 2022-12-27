@@ -26,6 +26,7 @@ export const loginWithGoogle = async (req: Request, res: Response) => {
                 lastName: payload.family_name,
                 email: payload.email,
                 verified: true,
+                createdAt: new Date()
             })
         }
         

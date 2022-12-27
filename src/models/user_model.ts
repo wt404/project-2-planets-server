@@ -16,7 +16,7 @@ const schema = new Schema<UserInterface>({
     email: { type: String, required: true },
     password: { type: String },
     verified: { type: Boolean, default: false },
-    createdAt: { type: Date, default: new Date() },
+    createdAt: { type: Date, required: true },
 })
 
 const UserModel = model<UserInterface>('User', schema)

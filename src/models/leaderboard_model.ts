@@ -13,7 +13,7 @@ interface LeaderboardInterface {
 const schema = new Schema<LeaderboardInterface>({
     user_id: { type: Schema.Types.ObjectId, ref: 'User', required: true },
     score: { type: Number, default: 0 },
-    startedAt: { type: Date, default: new Date() },
+    startedAt: { type: Date, required: true },
     finishedAt: { type: Date, default: null },
     questionId: { type: Schema.Types.ObjectId, req: 'Question', default: null },
     completedQuestionList: { type: [], default: [] }

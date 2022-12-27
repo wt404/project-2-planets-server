@@ -54,7 +54,8 @@ export const register = async (req: Request, res: Response) => {
             firstName: first_name,
             lastName: last_name,
             email,
-            password: hashedPassword
+            password: hashedPassword,
+            createdAt: new Date()
         })
 
         const verification = await VerificationModel.create({
