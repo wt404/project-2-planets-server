@@ -7,7 +7,7 @@ interface LeaderboardInterface {
     startedAt: Date
     finishedAt: Date
     questionId: ObjectId
-    completedQuestionList: []
+    completedQuestionList: any[]
 }
 
 const schema = new Schema<LeaderboardInterface>({
