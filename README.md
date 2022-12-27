@@ -52,3 +52,5 @@
 | METHOD | URI                       | ACTION                                                               |
 |--------|---------------------------|----------------------------------------------------------------------|
 | GET    | user/quiz                 | controllers/user/quiz_controller@getQuiz                             |
+| POST   | user/quiz                 | controllers/user/quiz_controller@startQuiz                           |
+| POST   | user/quiz/submit          | controllers/user/quiz_controller@submitAnswer                        |
