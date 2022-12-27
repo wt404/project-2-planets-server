@@ -122,11 +122,16 @@ export const submitAnswer = async (req: Request, res: Response) => {
         if (completedQuestionList.length >= 5) {
             const finishedAt = new Date()
             await LeaderboardModel.findByIdAndUpdate(leaderboard._id, { finishedAt })
+
+            const finalLeaderboard = await LeaderboardModel.findOne({ user_id: existingUser._id })
+            /* Not started yet */
+            if (!finalLeaderboard) return res.status(400).json({ message: 'Start quiz' })
+
             return res.json({
                 status: 'done',
-                score: leaderboard.score,
-                startedAt: leaderboard.startedAt,
-                finishedAt: finishedAt
+                score: finalLeaderboard.score,
+                startedAt: finalLeaderboard.startedAt,
+                finishedAt: finalLeaderboard.finishedAt
             })
         }
 
