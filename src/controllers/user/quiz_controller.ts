@@ -71,7 +71,8 @@ export const startQuiz = async (req: Request, res: Response) => {
             status: 'answering',
             question: quizData.question,
             choices: quizData.choices,
-            totalCompletedQuestion: leaderboard.completedQuestionList.length
+            totalCompletedQuestion: leaderboard.completedQuestionList.length,
+            startedAt: leaderboard.startedAt
         })
     } catch (error) {
         res.status(500).json({ message: 'Something went wrong' })
