@@ -55,6 +55,11 @@
 | POST   | user/quiz                 | controllers/user/quiz_controller@startQuiz                           |
 | POST   | user/quiz/submit          | controllers/user/quiz_controller@submitAnswer                        |
 
+### Settings
+| METHOD | URI                       | ACTION                                                               |
+|--------|---------------------------|----------------------------------------------------------------------|
+| POST   | user/settings/password    | controllers/user/settings_controller@updatePassword                  |
+
 ### Profile
 | METHOD | URI                       | ACTION                                                               |
 |--------|---------------------------|----------------------------------------------------------------------|
