@@ -56,6 +56,7 @@ export const startQuiz = async (req: Request, res: Response) => {
                     $sample: { size: 1 }
                 }
             ])
+            if (randomQuestion.length == 0) return res.status(400).json({ message: 'No more questions' })
             leaderboard = await LeaderboardModel.create({
                 user_id: existingUser._id,
                 questionId: randomQuestion[0]._id,
