@@ -4,6 +4,6 @@ import { updatePassword } from '../../controllers/user/settings_controller'
 
 const router = express.Router()
 
-router.post('/', updatePassword)
+router.post('/password', updatePassword)
 
 export default router
