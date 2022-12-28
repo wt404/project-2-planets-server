@@ -2,6 +2,7 @@
 import { Schema, model } from "mongoose"
 
 interface UserInterface {
+    avatar: string
     firstName: string
     lastName: string
     email: string
@@ -11,6 +12,7 @@ interface UserInterface {
 }
 
 const schema = new Schema<UserInterface>({
+    avatar: { type: String, default: null },
     firstName: { type: String, default: null },
     lastName: { type: String, default: null },
     email: { type: String, required: true },
