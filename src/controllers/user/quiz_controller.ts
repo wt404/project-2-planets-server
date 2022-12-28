@@ -27,7 +27,8 @@ export const getQuiz = async (req: Request, res: Response) => {
                 status: 'answering',
                 question: quizData.question,
                 choices: quizData.choices,
-                totalCompletedQuestion: leaderboard.completedQuestionList.length
+                totalCompletedQuestion: leaderboard.completedQuestionList.length,
+                startedAt: leaderboard.startedAt
             })
         }
 
