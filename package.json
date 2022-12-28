@@ -2,6 +2,7 @@
     "name": "project-2-planets-server",
     "version": "0.1.0",
     "scripts": {
+        "generate": "nodemon src/generate.ts",
         "dev": "nodemon src/index.ts",
         "build": "tsc",
         "start": "node dist/index.js"

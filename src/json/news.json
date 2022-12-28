@@ -1,0 +1,26 @@
+[
+    {
+        "title": "Space helicopters will help us explore Mars and other worlds. Here's how.",
+        "body": "When NASA scientists were planning the Mars Perseverance mission, they decided to try something new: Instead of just sending a rover, they'd also send up a small helicopter.",
+        "author": "Rebecca Sohn",
+        "publish": "Dec. 15, 2022",
+        "image": "https://cdn.mos.cms.futurecdn.net/9zsgYm8hFwRKzYqhAxZHHk-320-80.jpg.webp",
+        "url": "https://www.space.com/space-helicopters-will-explore-mars-titan"
+    },
+    {
+        "title": "Amazon tests machine learning software to analyze satellite images from space",
+        "body": "For the past 10 months, Amazon has been testing a machine learning software in space that can analyze Earth observation images on its own and send only the best ones to Earth.",
+        "author": "Tereza Pultarova",
+        "publish": "Dec. 06, 2022",
+        "image": "https://cdn.mos.cms.futurecdn.net/2N6iTh3R5u9ZktjvqQSjzW-450-80.jpg.webp",
+        "url": "https://www.space.com/amazon-satellites-machine-learning-in-orbit-first"
+    },
+    {
+        "title": "What is a geosynchronous orbit?",
+        "body": "Geosynchronous orbits are vital to a wide array of technology allowing satellites to travel in sync with Earth as it rotates. We explore it in more detail here.",
+        "author": "Robert Lea",
+        "publish": "Dec. 12, 2022",
+        "image": "https://cdn.mos.cms.futurecdn.net/KTtPdeiTyxj586VqxzvBvF-320-80.jpg.webp",
+        "url": "https://www.space.com/29222-geosynchronous-orbit.html"
+    }
+]
