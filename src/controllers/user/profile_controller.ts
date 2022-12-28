@@ -27,12 +27,7 @@ export const updateProfile = async (req: Request, res: Response) => {
 
         await UserModel.findByIdAndUpdate(existingUser._id, { avatar, firstName: first_name, lastName: last_name })
 
-        res.json({
-            avatar: avatar,
-            firstName: first_name,
-            lastName: last_name,
-            email: existingUser.email
-        })
+        res.json({ message: 'Profile updated.' })
     } catch (error) {
         res.status(500).json({ message: 'Something went wrong' })
     }
