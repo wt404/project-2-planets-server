@@ -16,7 +16,7 @@ export const updatePassword = async (req: Request, res: Response) => {
         if (validateResponse !== null) {
             return res.status(400).json({
                 message: validateResponse,
-                type: 'password'
+                type: 'old_password'
             })
         }
 
@@ -24,13 +24,16 @@ export const updatePassword = async (req: Request, res: Response) => {
         if (validateResponse !== null) {
             return res.status(400).json({
                 message: validateResponse,
-                type: 'password'
+                type: 'new_password'
             })
         }
 
         if (existingUser.password) {
             const isPasswordMatch = await bcrypt.compare(old_password, existingUser.password)
-            if (!isPasswordMatch) return res.status(400).json({ message: 'Invalid old password' })
+            if (!isPasswordMatch) return res.status(400).json({
+                message: 'Invalid old password',
+                type: 'old_password'
+            })
         }
 
         const hashedPassword = await bcrypt.hash(new_password, 12)
