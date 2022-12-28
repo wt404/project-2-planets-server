@@ -22,6 +22,7 @@ export const loginWithGoogle = async (req: Request, res: Response) => {
 
         if (!existingUser) {
             existingUser = await UserModel.create({
+                avatar: payload.picture,
                 firstName: payload.given_name,
                 lastName: payload.family_name,
                 email: payload.email,
