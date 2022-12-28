@@ -59,3 +59,4 @@
 | METHOD | URI                       | ACTION                                                               |
 |--------|---------------------------|----------------------------------------------------------------------|
 | GET    | user/profile              | controllers/user/profile_controller@getProfile                       |
+| POST   | user/profile              | controllers/user/profile_controller@updateProfile                    |
