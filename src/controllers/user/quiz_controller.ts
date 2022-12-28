@@ -95,7 +95,7 @@ export const submitAnswer = async (req: Request, res: Response) => {
         const startedAt = new Date(leaderboard.startedAt).getTime()
         const currentTime = new Date().getTime()
         const totalSeconds = (currentTime - startedAt) / 1000
-        if (totalSeconds >= 3600) {
+        if (totalSeconds >= 600) {
             const finishedAt = new Date()
             await LeaderboardModel.findByIdAndUpdate(leaderboard._id, { finishedAt })
             return res.json({
