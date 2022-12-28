@@ -21,6 +21,7 @@ import leaderdboardRoute from './routes/quiz/leaderboard_route'
 import authMiddleware from './middlewares/auth_middleware'
 import dashboardRoute from './routes/user/dashboard_route'
 import quizRoute from './routes/user/quiz_route'
+import settingsRoute from './routes/user/settings_route'
 import profileRoute from './routes/user/profile_route'
 
 mongoose.set('strictQuery', true)
@@ -63,6 +64,7 @@ app.use('/quiz/leaderboards', leaderdboardRoute)
 /* User with middleware */
 app.use('/user/dashboard', authMiddleware, dashboardRoute)
 app.use('/user/quiz', authMiddleware, quizRoute)
+app.use('/user/settings', authMiddleware, settingsRoute)
 app.use('/user/profile', authMiddleware, profileRoute)
 
 mongoose.connect(process.env.CONNECTION_URL!)
