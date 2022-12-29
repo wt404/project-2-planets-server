@@ -37,7 +37,8 @@ export const getQuiz = async (req: Request, res: Response) => {
             status: 'done',
             score: leaderboard.score,
             startedAt: leaderboard.startedAt,
-            finishedAt: leaderboard.finishedAt
+            finishedAt: leaderboard.finishedAt,
+            timeSpent: leaderboard.timeSpent
         })
     } catch (error) {
         res.status(500).json({ message: 'Something went wrong' })
@@ -100,12 +101,14 @@ export const submitAnswer = async (req: Request, res: Response) => {
         const totalSeconds = (currentTime - startedAt) / 1000
         if (totalSeconds >= 600) {
             const finishedAt = new Date()
-            await LeaderboardModel.findByIdAndUpdate(leaderboard._id, { finishedAt })
+            const timeSpent = (finishedAt.getTime() - new Date(leaderboard.startedAt).getTime()) / 1000
+            await LeaderboardModel.findByIdAndUpdate(leaderboard._id, { finishedAt, timeSpent })
             return res.json({
                 status: 'done',
                 score: leaderboard.score,
                 startedAt: leaderboard.startedAt,
-                finishedAt: finishedAt
+                finishedAt: finishedAt,
+                timeSpent: timeSpent
             })
         }
 
@@ -124,7 +127,8 @@ export const submitAnswer = async (req: Request, res: Response) => {
         /* Check if completed */
         if (completedQuestionList.length >= 5) {
             const finishedAt = new Date()
-            await LeaderboardModel.findByIdAndUpdate(leaderboard._id, { finishedAt })
+            const timeSpent = (finishedAt.getTime() - new Date(leaderboard.startedAt).getTime()) / 1000
+            await LeaderboardModel.findByIdAndUpdate(leaderboard._id, { finishedAt, timeSpent })
 
             const finalLeaderboard = await LeaderboardModel.findOne({ user_id: existingUser._id })
             /* Not started yet */
@@ -134,7 +138,8 @@ export const submitAnswer = async (req: Request, res: Response) => {
                 status: 'done',
                 score: finalLeaderboard.score,
                 startedAt: finalLeaderboard.startedAt,
-                finishedAt: finalLeaderboard.finishedAt
+                finishedAt: finalLeaderboard.finishedAt,
+                timeSpent: timeSpent
             })
         }
 

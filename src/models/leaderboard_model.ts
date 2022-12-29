@@ -8,6 +8,7 @@ interface LeaderboardInterface {
     finishedAt: Date
     questionId: ObjectId
     completedQuestionList: any[]
+    timeSpent: number
 }
 
 const schema = new Schema<LeaderboardInterface>({
@@ -16,7 +17,8 @@ const schema = new Schema<LeaderboardInterface>({
     startedAt: { type: Date, required: true },
     finishedAt: { type: Date, default: null },
     questionId: { type: Schema.Types.ObjectId, req: 'Question', default: null },
-    completedQuestionList: { type: [], default: [] }
+    completedQuestionList: { type: [], default: [] },
+    timeSpent: { type: Number, default: null }
 })
 
 const LeaderboardModel = model<LeaderboardInterface>('Leaderboard', schema)
