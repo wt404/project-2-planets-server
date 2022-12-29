@@ -1,0 +1,602 @@
+[
+    {
+        "question": "How many planets are there in the Solar System?",
+        "answer": "c",
+        "choices": {
+            "a": "7",
+            "b": "8",
+            "c": "9",
+            "d": "10"
+        }
+    },
+    {
+        "question": "What planet is closest to the sun?",
+        "answer": "b",
+        "choices": {
+            "a": "Mars",
+            "b": "Mercury",
+            "c": "Earth",
+            "d": "Venus"
+        }
+    },
+    {
+        "question": "What is the second planet from the sun?",
+        "answer": "d",
+        "choices": {
+            "a": "Mercury",
+            "b": "Earth",
+            "c": "Mars",
+            "d": "Venus"
+        }
+    },
+    {
+        "question": "What is the third planet from the sun?",
+        "answer": "a",
+        "choices": {
+            "a": "Earth",
+            "b": "Mars",
+            "c": "Saturn",
+            "d": "Jupiter"
+        }
+    },
+    {
+        "question": "What is the fourth planet from the sun?",
+        "answer": "b",
+        "choices": {
+            "a": "Earth",
+            "b": "Mars",
+            "c": "Saturn",
+            "d": "Jupiter"
+        }
+    },
+    {
+        "question": "Which planet has the largest Asteroid belt?",
+        "answer": "a",
+        "choices": {
+            "a": "Saturn",
+            "b": "Venus",
+            "c": "Mars",
+            "d": "Jupiter"
+        }
+    },
+    {
+        "question": "What planet was recently discovered?",
+        "answer": "c",
+        "choices": {
+            "a": "Mars",
+            "b": "Planet Y",
+            "c": "Planet X",
+            "d": "The Sun's Moon"
+        }
+    },
+    {
+        "question": "What planet is the furthest from Neptune? ",
+        "answer": "a",
+        "choices": {
+            "a": "Mercury",
+            "b": "The Milky Way",
+            "c": "Mars",
+            "d": "Uranus"
+        }
+    },
+    {
+        "question": "Are there any other planets in this solar system that we could live on?",
+        "answer": "b",
+        "choices": {
+            "a": "Yes",
+            "b": "No",
+            "c": "Sort of",
+            "d": "Impossible to find out"
+        }
+    },
+    {
+        "question": "Is there water and more than 3 moons on any planet?",
+        "answer": "a",
+        "choices": {
+            "a": "Yes",
+            "b": "No",
+            "c": "Sort of",
+            "d": "Impossible to find out"
+        }
+    },
+    {
+        "question": "Which of the following planets is the hottest planet in the solar system?",
+        "answer": "b",
+        "choices": {
+            "a": "Mercury",
+            "b": "Venus",
+            "c": "Mars",
+            "d": "Jupiter"
+        }
+    },
+    {
+        "question": "Which of the following planets in our solar system have no moon?",
+        "answer": "b",
+        "choices": {
+            "a": "Earth",
+            "b": "Venus",
+            "c": "Mars",
+            "d": "Jupiter"
+        }
+    },
+    {
+        "question": "How many moons does Saturn have?",
+        "answer": "c",
+        "choices": {
+            "a": "40",
+            "b": "50",
+            "c": "82+",
+            "d": "22"
+        }
+    },
+    {
+        "question": "When is the only time you can see most stars?",
+        "answer": "b",
+        "choices": {
+            "a": "In the morning",
+            "b": "At night",
+            "c": "In the afternoon",
+            "d": "When you see your boyfriend/girlfriend"
+        }
+    },
+    {
+        "question": "The Earth takes how many hours to rotate once?",
+        "answer": "c",
+        "choices": {
+            "a": "32",
+            "b": "12",
+            "c": "24",
+            "d": "48"
+        }
+    },
+    {
+        "question": "The Earth takes how many days to orbit around the sun once?",
+        "answer": "b",
+        "choices": {
+            "a": "324",
+            "b": "365",
+            "c": "90",
+            "d": "45"
+        }
+    },
+    {
+        "question": "What is the Milky Way?",
+        "answer": "b",
+        "choices": {
+            "a": "Venus",
+            "b": "Our Galaxy",
+            "c": "Earth",
+            "d": "Stars"
+        }
+    },
+    {
+        "question": "How many moons go around Neptune?",
+        "answer": "c",
+        "choices": {
+            "a": "4",
+            "b": "6",
+            "c": "8",
+            "d": "10"
+        }
+    },
+    {
+        "question": "What were the Sun and the planets created from?",
+        "answer": "a",
+        "choices": {
+            "a": "A huge Nebula of gases and dust",
+            "b": "A rain cloud",
+            "c": "A lost planet",
+            "d": "Trapped heat"
+        }
+    },
+    {
+        "question": "What color does Earth look like from space?",
+        "answer": "d",
+        "choices": {
+            "a": "Green",
+            "b": "Red and Blue",
+            "c": "Orange",
+            "d": "A Giant Blue Ball"
+        }
+    },
+    {
+        "question": "How much of Earth's surface is covered with water?",
+        "answer": "b",
+        "choices": {
+            "a": "80%",
+            "b": "70%",
+            "c": "50%",
+            "d": "40%"
+        }
+    },
+    {
+        "question": "Who developed the first telescope?",
+        "answer": "c",
+        "choices": {
+            "a": "Kepler",
+            "b": "Edwin Hubble",
+            "c": "Galileo Galilei",
+            "d": "Jomar"
+        }
+    },
+    {
+        "question": "When did the russians send a satellite into space?",
+        "answer": "c",
+        "choices": {
+            "a": "1960",
+            "b": "1975",
+            "c": "1957",
+            "d": "1980"
+        }
+    },
+    {
+        "question": "Who was the Apollo 11 mission leader?",
+        "answer": "c",
+        "choices": {
+            "a": "Yuri Gagarin",
+            "b": "Jason Lerit",
+            "c": "Neil Armstrong",
+            "d": "Buzz Aldrin"
+        }
+    },
+    {
+        "question": "Which is the farthest planet from the Sun?",
+        "answer": "c",
+        "choices": {
+            "a": "Mercury",
+            "b": "Saturn",
+            "c": "Neptune",
+            "d": "Mars"
+        }
+    },
+    {
+        "question": "Which is the smallest planet in the Solar System?",
+        "answer": "a",
+        "choices": {
+            "a": "Mercury",
+            "b": "Jupiter",
+            "c": "Venus",
+            "d": "Saturn"
+        }
+    },
+    {
+        "question": "The largest planet in the Solar System is :",
+        "answer": "b",
+        "choices": {
+            "a": "Neptune",
+            "b": "Jupiter",
+            "c": "Venus",
+            "d": "Mercury"
+        }
+    },
+    {
+        "question": "Which among the following is Inner planet?",
+        "answer": "c",
+        "choices": {
+            "a": "Neptune",
+            "b": "Saturn",
+            "c": "Earth",
+            "d": "Jupiter"
+        }
+    },
+    {
+        "question": "Which is the brightest and hottest planet in the Solar System?",
+        "answer": "b",
+        "choices": {
+            "a": "Neptune",
+            "b": "Venus",
+            "c": "Earth",
+            "d": "Mars"
+        }
+    },
+    {
+        "question": "Mars is known as :",
+        "answer": "b",
+        "choices": {
+            "a": "Blue Planet",
+            "b": "Red Planet",
+            "c": "Earth's Twin",
+            "d": "Green Planet"
+        }
+    },
+    {
+        "question": "Which planet is known as the Earth's twin?",
+        "answer": "c",
+        "choices": {
+            "a": "Mars",
+            "b": "Jupiter",
+            "c": "Venus",
+            "d": "Saturn"
+        }
+    },
+    {
+        "question": "The natural satellite of the Earth is:",
+        "answer": "a",
+        "choices": {
+            "a": "Moon",
+            "b": "Phobos",
+            "c": "Oberon",
+            "d": "Ganeymade"
+        }
+    },
+    {
+        "question": "Which planet is called as “Morning Star” or “Evening Star”?",
+        "answer": "d",
+        "choices": {
+            "a": "Neptune",
+            "b": "Mars",
+            "c": "Saturn",
+            "d": "Venus"
+        }
+    },
+    {
+        "question": "Largest moon in the Solar System?",
+        "answer": "d",
+        "choices": {
+            "a": "Titant",
+            "b": "Ariel",
+            "c": "Triton",
+            "d": "Ganeymade"
+        }
+    },
+    {
+        "question": "Venus is considered as Earth's-twin because :",
+        "answer": "c",
+        "choices": {
+            "a": "It is a brightest planet in the night sky.",
+            "b": "It is the hottest planet in the Solar System.",
+            "c": "Its size and shape are similar to that of the Earth.",
+            "d": "It has no moons."
+        }
+    },
+    {
+        "question": "The Planet with maximum number of moons?",
+        "answer": "d",
+        "choices": {
+            "a": "Mars",
+            "b": "Neptune",
+            "c": "Uranus",
+            "d": "Saturn"
+        }
+    },
+    {
+        "question": "Phobos and Deimos are the moons of:",
+        "answer": "d",
+        "choices": {
+            "a": "Earth",
+            "b": "Venus",
+            "c": "Jupiter",
+            "d": "Mars"
+        }
+    },
+    {
+        "question": "The status of Pluto is demoted to :",
+        "answer": "a",
+        "choices": {
+            "a": "Dwarf Planet",
+            "b": "Asteroid",
+            "c": "Comet",
+            "d": "Meteor"
+        }
+    },
+    {
+        "question": "The planet with rings around it is/are:",
+        "answer": "d",
+        "choices": {
+            "a": "Uranus",
+            "b": "Jupiter",
+            "c": "Saturn and Neptune",
+            "d": "All of these"
+        }
+    },
+    {
+        "question": "How many moons does Neptune have?",
+        "answer": "b",
+        "choices": {
+            "a": "27",
+            "b": "14",
+            "c": "5",
+            "d": "12"
+        }
+    },
+    {
+        "question": "Which of the following statement is correct about the Earth?",
+        "answer": "d",
+        "choices": {
+            "a": "Earth is also known as “Blue Planet”.",
+            "b": "It has only nutural satellite.",
+            "c": "It is the third nearest planet to the sun, and the fifth largest planet in the Solar System.",
+            "d": "All of these"
+        }
+    },
+    {
+        "question": "The “Green Planet” of Solar System is :",
+        "answer": "b",
+        "choices": {
+            "a": "Saturn",
+            "b": "Uranus",
+            "c": "Mars",
+            "d": "Neptune"
+        }
+    },
+    {
+        "question": "The Planet that rotates from east to west?",
+        "answer": "a",
+        "choices": {
+            "a": "Venus and Uranus",
+            "b": "Mercury and Mars",
+            "c": "Uranus and Neptune",
+            "d": "Jupiter and Saturn"
+        }
+    },
+    {
+        "question": "If there is no Sun the colour of the sky would be :",
+        "answer": "c",
+        "choices": {
+            "a": "blue",
+            "b": "yellow",
+            "c": "black",
+            "d": "red"
+        }
+    },
+    {
+        "question": "Asteroids are found between the orbits of :",
+        "answer": "b",
+        "choices": {
+            "a": "Mercury and Venus",
+            "b": "Mars and Jupiter",
+            "c": "Earth and Mars",
+            "d": "Venus and Earth"
+        }
+    },
+    {
+        "question": "The largest volcano “Olympus Mons” which is also the Solar System’s tallest mountain is located on :",
+        "answer": "a",
+        "choices": {
+            "a": "Mars",
+            "b": "Mercury",
+            "c": "Earth",
+            "d": "Jupiter"
+        }
+    },
+    {
+        "question": "Inner Planets are also called as :",
+        "answer": "c",
+        "choices": {
+            "a": "Jovian Planets",
+            "b": "Gaseous Planets",
+            "c": "Terrestrial Planets",
+            "d": "None of these"
+        }
+    },
+    {
+        "question": "Outer Planets are also called as :",
+        "answer": "b",
+        "choices": {
+            "a": "Rocky Planets",
+            "b": "Jovian Planets",
+            "c": "Terrestrial Planets",
+            "d": "All of these"
+        }
+    },
+    {
+        "question": "Moon orbits the Earth every :",
+        "answer": "a",
+        "choices": {
+            "a": "27.3 days",
+            "b": "29.5 days",
+            "c": "26.3 days",
+            "d": "15"
+        }
+    },
+    {
+        "question": "Who was the first person to reach space ?",
+        "answer": "b",
+        "choices": {
+            "a": "Valentina Tereshkova",
+            "b": "Yuri Gagarin",
+            "c": "Alan Demol",
+            "d": "Alexei Leonov"
+        }
+    },
+    {
+        "question": "The planet with least density :",
+        "answer": "b",
+        "choices": {
+            "a": "Mercury",
+            "b": "Saturn",
+            "c": "Neptune",
+            "d": "Earth"
+        }
+    },
+    {
+        "question": "Which planet has the highest density in Solar System?",
+        "answer": "a",
+        "choices": {
+            "a": "Earth",
+            "b": "Jupiter",
+            "c": "Neptune",
+            "d": "Venus"
+        }
+    },
+    {
+        "question": "Which is the only planet in Solar System whose density is less than water?",
+        "answer": "d",
+        "choices": {
+            "a": "Mars",
+            "b": "Mercury",
+            "c": "Uranus",
+            "d": "Saturn"
+        }
+    },
+    {
+        "question": "Which of the following statement is incorrect about Uranus?",
+        "answer": "d",
+        "choices": {
+            "a": "Uranus is known as the Green Planet and it has faint rings around it .",
+            "b": "It is an Ice Giant planet .",
+            "c": "It has 27 moons .",
+            "d": "It rotates from West to East ."
+        }
+    },
+    {
+        "question": "Which planet has shortest rotation period ?",
+        "answer": "b",
+        "choices": {
+            "a": "Earth",
+            "b": "Jupiter",
+            "c": "Uranus",
+            "d": "Venus"
+        }
+    },
+    {
+        "question": "The planet with longest rotation period?",
+        "answer": "d",
+        "choices": {
+            "a": "Earth",
+            "b": "Jupiter",
+            "c": "Mercury",
+            "d": "Venus"
+        }
+    },
+    {
+        "question": "The inner most layer of the Sun's atmosphere is :",
+        "answer": "a",
+        "choices": {
+            "a": "Photosphere",
+            "b": "Corona",
+            "c": "Chromosphere",
+            "d": "None of these"
+        }
+    },
+    {
+        "question": "The outer most layer of the Sun's atmosphere is :",
+        "answer": "b",
+        "choices": {
+            "a": "Chromosphere",
+            "b": "Corona",
+            "c": "Photosphere",
+            "d": "None of these"
+        }
+    },
+    {
+        "question": "Which planet is called as “Sideways Planet”?",
+        "answer": "d",
+        "choices": {
+            "a": "Earth",
+            "b": "Jupiter",
+            "c": "Saturn",
+            "d": "Uranus"
+        }
+    },
+    {
+        "question": "Which of the following is at the center of the Solar System?",
+        "answer": "a",
+        "choices": {
+            "a": "Sun",
+            "b": "Earth",
+            "c": "Moon",
+            "d": "Mars"
+        }
+    }
+]
