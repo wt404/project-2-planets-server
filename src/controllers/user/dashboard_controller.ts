@@ -18,11 +18,11 @@ export const getDashboardStats = async (req: Request, res: Response) => {
                     }
                 }
             },
-            // Sort by scores & finishedAt
+            // Sort by score & timeSpent
             {
                 $sort: {
                     score: -1, // descending
-                    finishedAt: 1 // ascending
+                    timeSpent: 1 // ascending
                 }
             },
             // Group
@@ -35,7 +35,8 @@ export const getDashboardStats = async (req: Request, res: Response) => {
                             user_id: "$user_id",
                             score: "$score",
                             startedAt: "$startedAt",
-                            finishedAt: "$finishedAt"
+                            finishedAt: "$finishedAt",
+                            timeSpent: "$timeSpent"
                         }
                     }
                 }
@@ -59,7 +60,8 @@ export const getDashboardStats = async (req: Request, res: Response) => {
             rank: null,
             correctAnswer: null,
             startedAt: null,
-            finishedAt: null
+            finishedAt: null,
+            timeSpent: null
         }
 
         if (result.length != 0) {
@@ -67,6 +69,7 @@ export const getDashboardStats = async (req: Request, res: Response) => {
             stats.correctAnswer = result[0].players["score"]
             stats.startedAt = result[0].players["startedAt"]
             stats.finishedAt = result[0].players["finishedAt"]
+            stats.timeSpent = result[0].players["timeSpent"]
         }
 
         res.json(stats)

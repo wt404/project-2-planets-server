@@ -15,11 +15,11 @@ export const getLeadeboards = async (req: Request, res: Response) => {
                     }
                 }
             },
-            // Sort by scores & finishedAt
+            // Sort by score & timeSpent
             {
                 $sort: {
                     score: -1, // descending
-                    finishedAt: 1 // ascending
+                    timeSpent: 1 // ascending
                 }
             },
             // Limit by 10
