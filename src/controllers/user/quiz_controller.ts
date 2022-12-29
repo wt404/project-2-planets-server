@@ -116,7 +116,7 @@ export const submitAnswer = async (req: Request, res: Response) => {
         const quizData = await QuizModel.findOne({ _id: leaderboard.questionId })
         if (!quizData) return res.status(400).json({ message: 'Question not found' })
         if (answer == quizData.answer) {
-            await LeaderboardModel.findByIdAndUpdate(leaderboard._id, { score: leaderboard.score + 1 })
+            await LeaderboardModel.findByIdAndUpdate(leaderboard._id, { score: leaderboard.score + 2 })
         }
 
         /* Add current questionId to completedQuestionList */
@@ -125,7 +125,7 @@ export const submitAnswer = async (req: Request, res: Response) => {
         await LeaderboardModel.findByIdAndUpdate(leaderboard._id, { completedQuestionList })
 
         /* Check if completed */
-        if (completedQuestionList.length >= 5) {
+        if (completedQuestionList.length >= 50) {
             const finishedAt = new Date()
             const timeSpent = (finishedAt.getTime() - new Date(leaderboard.startedAt).getTime()) / 1000
             await LeaderboardModel.findByIdAndUpdate(leaderboard._id, { finishedAt, timeSpent })
