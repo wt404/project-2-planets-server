@@ -37,7 +37,7 @@ export const sendFeedback = async (req: Request, res: Response) => {
                 {
                     From: {
                         Email: "spaceversegroup2@gmail.com",
-                        Name: "SpaceVerse Feedback"
+                        Name: "SpaceVerse"
                     },
                     To: [
                         {
