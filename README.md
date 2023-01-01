@@ -28,7 +28,6 @@
 | METHOD | URI                       | ACTION                                                               |
 |--------|---------------------------|----------------------------------------------------------------------|
 | POST   | verify/account            | controllers/verification_controller@verifyAccount                    |
-| POST   | verify/password           | controllers/verification_controller@verifyPassword                   |
 
 ### Auth
 | METHOD | URI                       | ACTION                                                               |
@@ -37,6 +36,7 @@
 | POST   | quiz/auth/login           | controllers/quiz/auth/login_controller@login                         |
 | POST   | quiz/auth/google          | controllers/quiz/auth/login_with_google_controller@loginWithGoogle   |
 | POST   | quiz/auth/forgot-password | controllers/quiz/auth/forgot_password_controller@forgotPassword      |
+| POST   | quiz/auth/reset-password  | controllers/quiz/auth/reset_password_controller@resetPassword        |
 
 ### Leaderboard
 | METHOD | URI                       | ACTION                                                               |
