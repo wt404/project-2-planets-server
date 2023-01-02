@@ -33,6 +33,7 @@ export const login = async (req: Request, res: Response) => {
         if (!existingUser.verified) return res.status(400).json({ message: 'Please verify your account first '})
         const token = jwt.sign(
             {
+                avatar: existingUser.avatar,
                 first_name: existingUser.firstName,
                 last_name: existingUser.lastName,
                 email: existingUser.email,
