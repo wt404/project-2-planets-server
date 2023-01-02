@@ -1,10 +1,10 @@
 
 import express from 'express'
-import { getProfile } from '../../controllers/user/profile_controller'
+import { getProfile, updateProfile } from '../../controllers/user/profile_controller'
 
 const router = express.Router()
 
 router.get('/', getProfile)
-router.post('/', getProfile)
+router.post('/', updateProfile)
 
 export default router
