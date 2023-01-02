@@ -33,7 +33,6 @@ export const loginWithGoogle = async (req: Request, res: Response) => {
         
         const token = jwt.sign(
             {
-                avatar: existingUser.avatar,
                 firstName: existingUser.firstName,
                 lastName: existingUser.lastName,
                 email: existingUser.email,
@@ -43,7 +42,7 @@ export const loginWithGoogle = async (req: Request, res: Response) => {
                 expiresIn: process.env.JWT_EXPIRES_IN
             }
         )
-        res.json({ token })
+        res.json({ token, avatar: existingUser.avatar, })
     } catch (error) {
         res.status(500).json({ message: 'Something went wrong' })
     }
