@@ -1,6 +1,7 @@
 
 import { Request, Response } from "express"
 import UserModel from "../../models/user_model"
+import { validateFirstName, validateLastName } from "../../utils/validation_util"
 
 export const getProfile = async (req: Request, res: Response) => {
     try {
@@ -21,6 +22,22 @@ export const updateProfile = async (req: Request, res: Response) => {
     try {
 
         const { avatar, firstName, lastName } = req.body
+
+        let validateResponse = validateFirstName(firstName)
+        if (validateResponse !== null) {
+            return res.status(400).json({
+                message: validateResponse,
+                type: 'first_name'
+            })
+        }
+
+        validateResponse = validateLastName(lastName)
+        if (validateResponse !== null) {
+            return res.status(400).json({
+                message: validateResponse,
+                type: 'last_name'
+            })
+        }
 
         const existingUser = await UserModel.findOne({ email: req.user.email })
         if (!existingUser) return res.status(400).json({ message: 'Invalid credentials' })
