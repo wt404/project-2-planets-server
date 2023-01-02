@@ -34,8 +34,8 @@ export const loginWithGoogle = async (req: Request, res: Response) => {
         const token = jwt.sign(
             {
                 avatar: existingUser.avatar,
-                first_name: existingUser.firstName,
-                last_name: existingUser.lastName,
+                firstName: existingUser.firstName,
+                lastName: existingUser.lastName,
                 email: existingUser.email,
             },
             process.env.JWT_SECRET!,

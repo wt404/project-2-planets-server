@@ -5,16 +5,16 @@ import Mailjet from "node-mailjet"
 export const sendFeedback = async (req: Request, res: Response) => {
     try {
         
-        const { first_name, last_name, email, message } = req.body
+        const { firstName, lastName, email, message } = req.body
 
-        if (first_name == undefined || first_name == '') return res.status(400).json({
+        if (firstName == undefined || firstName == '') return res.status(400).json({
             message: 'Invalid first name',
-            type: 'first_name'
+            type: 'firstName'
         })
 
-        if (last_name == undefined || last_name == '') return res.status(400).json({
+        if (lastName == undefined || lastName == '') return res.status(400).json({
             message: 'Invalid last name',
-            type: 'last_name'
+            type: 'lastName'
         })
 
         if (email == undefined || email == '') return res.status(400).json({
@@ -58,7 +58,7 @@ export const sendFeedback = async (req: Request, res: Response) => {
                         }
                     ],
                     Subject: "Feedback Received",
-                    TextPart: `First Name: ${first_name}\nLast Name: ${last_name}\nEmail: ${email}\nMessage: ${message}`,
+                    TextPart: `First Name: ${firstName}\nLast Name: ${lastName}\nEmail: ${email}\nMessage: ${message}`,
                     HTMLPart: ""
                 }
             ]

@@ -27,7 +27,7 @@ export const updateProfile = async (req: Request, res: Response) => {
         if (validateResponse !== null) {
             return res.status(400).json({
                 message: validateResponse,
-                type: 'first_name'
+                type: 'firstName'
             })
         }
 
@@ -35,7 +35,7 @@ export const updateProfile = async (req: Request, res: Response) => {
         if (validateResponse !== null) {
             return res.status(400).json({
                 message: validateResponse,
-                type: 'last_name'
+                type: 'lastName'
             })
         }
 

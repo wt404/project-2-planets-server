@@ -9,21 +9,21 @@ import { generateToken } from '../../verify/verification_controller'
 
 export const register = async (req: Request, res: Response) => {
     try {
-        const { first_name, last_name, email, password } = req.body
+        const { firstName, lastName, email, password } = req.body
 
-        let validateResponse = validateFirstName(first_name)
+        let validateResponse = validateFirstName(firstName)
         if (validateResponse !== null) {
             return res.status(400).json({
                 message: validateResponse,
-                type: 'first_name'
+                type: 'firstName'
             })
         }
 
-        validateResponse = validateLastName(last_name)
+        validateResponse = validateLastName(lastName)
         if (validateResponse !== null) {
             return res.status(400).json({
                 message: validateResponse,
-                type: 'last_name'
+                type: 'lastName'
             })
         }
 
@@ -51,8 +51,8 @@ export const register = async (req: Request, res: Response) => {
         
         const hashedPassword = await bcrypt.hash(password, 12)
         const user = await UserModel.create({
-            firstName: first_name,
-            lastName: last_name,
+            firstName: firstName,
+            lastName: lastName,
             email,
             password: hashedPassword,
             createdAt: new Date()
@@ -81,11 +81,11 @@ export const register = async (req: Request, res: Response) => {
                     To: [
                         {
                             Email: email,
-                            Name: `${first_name} ${last_name}`
+                            Name: `${firstName} ${lastName}`
                         },
                     ],
                     Subject: "Verify your Account",
-                    TextPart: `Hello ${first_name}, please verify your account by clicking this link: ${link}`,
+                    TextPart: `Hello ${firstName}, please verify your account by clicking this link: ${link}`,
                     HTMLPart: ""
                 }
             ]
