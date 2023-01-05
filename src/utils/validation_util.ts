@@ -22,6 +22,9 @@ export const validateToken = (value: string) => {
     if (!/^[A-Za-z0-9]*$/.test(value)) {
         return 'Invalid token'
     }
+    if (value.length > 30) {
+        return 'Invalid token'
+    }
     return null
 }
 
