@@ -38,7 +38,7 @@ export const forgotPassword = async (req: Request, res: Response) => {
                 Messages: [
                     {
                         From: {
-                            Email: "spaceversegroup2@gmail.com",
+                            Email: "spaceverseofficial2023@gmail.com",
                             Name: "SpaceVerse"
                         },
                         To: [
